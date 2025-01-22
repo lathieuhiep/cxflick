@@ -1,11 +1,13 @@
 $prefix-theme: theme-;
+$font-path: '../fonts/SFProDisplay';
 
 // color
 $mt-colors: (
-        "primary": #3498db,
-        "secondary": #2ecc71,
-        "accent": #e74c3c,
-        "success": #28a745,
+        "primary": #292929 ,
+        "secondary": #818181,
+        "tertiary": #FFDF00,
+        "accent": #FF3B30,
+        "success": #3FC700,
         "error": #dc3545,
         "warning": #ffc107,
         "info": #17a2b8,
@@ -42,8 +44,8 @@ $var-fs-3xl: var(--#{$prefix-theme}fs-3xl);
 
 // font family
 $mt-fonts: (
-        base: '"Poppins", sans-serif',
-        heading: '"Roboto Slab", sans-serif'
+        base: '"SFProDisplay", sans-serif',
+        heading: '"SFProDisplay", sans-serif'
 );
 $var-ff-base: var(--#{$prefix-theme}ff-base);
 $var-ff-heading: var(--#{$prefix-theme}ff-heading);
@@ -70,14 +72,14 @@ $spacers: ();
 }
 
 // body
-$body-color: $var-black-color;
+$body-color: $var-primary-color;
 $body-bg: $var-white-color;
 
 $color-required: #ff5555;
 
 // headings variables
 $headings-margin-bottom: $spacing-base * 3;
-$heading-color: $var-primary-color;
+$heading-color: $var-black-color;
 $headings-font-family: $var-ff-heading;
 $headings-font-weight: $var-fw-bold;
 $headings-line-height: $line-height-heading;

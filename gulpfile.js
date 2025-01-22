@@ -333,7 +333,7 @@ function watchTask() {
 
     // watch abstracts
     watch([
-        `${paths.shared.scss}abstracts/*/**.scss`
+        `${paths.shared.scss}abstracts/*.scss`
     ], gulp.series(
         buildStyleBootstrap,
         buildStyleTheme,
