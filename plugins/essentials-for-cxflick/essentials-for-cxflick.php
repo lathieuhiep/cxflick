@@ -53,7 +53,7 @@ function efcxf_add_elementor_widget_categories( $elements_manager ): void {
 	$elements_manager->add_category(
 		'efcxf-addons',
 		[
-			'title' => esc_html__( 'EFCXF Addons', 'essentials-for-cxflick' ),
+			'title' => esc_html__( 'Essentials Addons', 'essentials-for-cxflick' ),
 			'icon'  => 'icon-goes-here',
 		]
 	);
