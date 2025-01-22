@@ -195,7 +195,6 @@ function buildStyleTheme() {
         .pipe(sass({
             outputStyle: 'expanded'
         }, '').on('error', sass.logError))
-        .pipe(dest(`${paths.output.theme.css}`))
         .pipe(cleanCSS ({
             level: 2
         }))
