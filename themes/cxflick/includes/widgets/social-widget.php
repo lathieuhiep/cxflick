@@ -7,15 +7,15 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-class cxflick_social_widget extends WP_Widget {
+class CXFlick_Social_Widget extends WP_Widget {
 	/* Widget setup */
     public function __construct() {
         $cxflick_social_widget_ops = array(
             'classname'     =>  'social-widget',
-            'description'   =>  esc_html__( 'A widget that displays your social icons', 'cxflick' ),
+            'description'   =>  esc_html__( 'Hiển thị mạng xã hội', 'cxflick' ),
         );
 
-        parent::__construct( 'social-widget', 'My Theme: Social Icons', $cxflick_social_widget_ops );
+        parent::__construct( 'social-widget', 'My Theme: Mạng xã hội', $cxflick_social_widget_ops );
     }
 
     /**
@@ -24,7 +24,7 @@ class cxflick_social_widget extends WP_Widget {
      * @param array $args
      * @param array $instance
      */
-	function widget( $args, $instance ) {
+	function widget( $args, $instance ): void {
         echo $args['before_widget'];
 
         if ( ! empty( $instance['title'] ) ) {
@@ -44,9 +44,9 @@ class cxflick_social_widget extends WP_Widget {
      *
      * @param array $instance The widget options
      */
-	function form( $instance ) {
+	function form( $instance ): void {
 		$defaults = array(
-            'title' => esc_html__('Subscribe & Follow', 'cxflick')
+            'title' => esc_html__('Mạng xã hội', 'cxflick')
         );
 
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
@@ -61,7 +61,7 @@ class cxflick_social_widget extends WP_Widget {
 		</p>
 		
 		<p>
-            <?php esc_html_e( 'Note: Set your social links in the cxflick Options', 'cxflick' ); ?>
+            <?php esc_html_e( 'Chú ý: Thiệt lập liên kết mạng xã hội trong mục "Cài đặt theme -> Mạng xã hội"', 'cxflick' ); ?>
         </p>
 	<?php
 
@@ -75,7 +75,7 @@ class cxflick_social_widget extends WP_Widget {
      *
      * @return array
      */
-    function update( $new_instance, $old_instance ) {
+    function update( $new_instance, $old_instance ): array {
         $instance = array();
 
         $instance['title'] = strip_tags( $new_instance['title'] );
@@ -85,8 +85,8 @@ class cxflick_social_widget extends WP_Widget {
 }
 
 // Register social widget
-function cxflick_social_widget_register(): void {
-    register_widget( 'cxflick_social_widget' );
+function cxflick_register_social_widget(): void {
+    register_widget( 'CXFlick_Social_Widget' );
 }
 
-add_action( 'widgets_init', 'cxflick_social_widget_register' );
+add_action( 'widgets_init', 'cxflick_register_social_widget' );
