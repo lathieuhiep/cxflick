@@ -5,7 +5,7 @@ $cart = cxflick_get_option( 'opt_menu_cart', '1' );
 ?>
 <header class="main-header <?php echo esc_attr( $sticky_menu == '1' ? 'active-sticky-nav' : '' ); ?>">
     <nav class="main-header__warp container">
-        <div class="logo">
+        <div class="logo d-flex align-items-center">
             <a href="<?php echo esc_url( get_home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
 				<?php
 				if ( ! empty( $logo['id'] ) ) :
@@ -14,8 +14,8 @@ $cart = cxflick_get_option( 'opt_menu_cart', '1' );
 					?>
 
                     <img class="logo-default"
-                         src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo.png' ) ) ?>"
-                         alt="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>" width="64" height="64"/>
+                         src="<?php echo esc_url( get_theme_file_uri( '/assets/images/logo.svg' ) ) ?>"
+                         alt="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>" />
 
 				<?php endif; ?>
             </a>
