@@ -1,17 +1,17 @@
 @import "../../../shared/scss/abstracts/abstracts";
 
-.global-header {
+.main-header {
   background-color: #ffffff;
   box-shadow: 0 .3rem .3rem -0.3rem rgba(0, 0, 0, 0.3);
-}
 
-.site-navigation {
-  position: relative;
-  display: flex;
-  gap: 2.4rem;
-  min-height: 6.4rem;
+  &__warp {
+    position: relative;
+    display: flex;
+    gap: 2.4rem;
+    min-height: 6.4rem;
+  }
 
-  &__logo {
+  .logo {
     --#{$prefix-theme}logo-padding: var(--#{$prefix-theme}spacing-2);
 
     @media (min-width: 992px) {
@@ -19,6 +19,8 @@
     }
 
     @media (max-width: 991px) {
+      display: flex;
+      justify-content: space-between;
       flex: 1;
     }
 
@@ -30,7 +32,7 @@
     }
   }
 
-  &__menu {
+  .primary-menu {
     --#{$prefix-theme}menu-item-padding: 0 1.2rem;
     flex: 1;
 
@@ -260,11 +262,11 @@
         font-family: $font-awesome-free;
         font-style: normal;
         font-weight: 900;
-        
+
         @media (min-width: 992px) {
           content: "\f078";
         }
-        
+
         @media (max-width: 991px) {
           content: "\2b";
         }
@@ -272,12 +274,130 @@
     }
   }
 
-  @media (max-width: 991px) {
-    grid-template-columns: 1fr auto;
+  .widget-cart-warp {
+    position: relative;
+    flex: 0;
 
-    &__logo {
-      display: flex;
-      justify-content: space-between;
+    .cart-customlocation {
+      position: relative;
+      cursor: pointer;
+
+      i {
+        font-size: 1.8rem;
+        padding-right: 1.5rem;
+      }
+
+      .number-cart-product {
+        position: absolute;
+        font-size: $var-fs-sm;
+        color: #ffffff;
+        top: -1.2rem;
+        right: 0;
+        @include square(2rem, 50%);
+        @include flex-center();
+        background-color: $var-accent-color;
+      }
+    }
+
+    .widget_shopping_cart {
+      position: absolute;
+      top: 120%;
+      right: 0;
+      width: 30rem;
+      padding: 2rem 1.5rem;
+      background-color: $var-white-color;
+      z-index: 10;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 0 0 1.5rem -0.5rem rgba(0, 0, 0, 0.4);
+      @include transition();
+
+      .widgettitle {
+        display: none;
+      }
+
+      .widget_shopping_cart_content {
+        .cart_list {
+          margin-bottom: 2rem;
+
+          li {
+            padding: 0;
+            margin-bottom: 1.5rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            a {
+              font-weight: $var-fw-regular;
+
+              &.remove {
+                top: -0.3rem;
+                left: auto;
+                right: 0;
+                width: auto;
+                height: auto;
+                font-size: 3.2rem;
+                color: $body-color !important;
+                line-height: inherit;
+                background-color: transparent;
+                @include flex-center;
+
+                &:hover {
+                  color: $var-accent-color !important;
+                }
+              }
+
+              img {
+                float: left;
+                margin: 0 1rem 0 0;
+                width: 5rem;
+              }
+            }
+
+            .woocommerce-Price-amount {
+              font-weight: $var-fw-bold;
+            }
+          }
+        }
+
+        .woocommerce-mini-cart__total {
+          padding: 1.5rem 0 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .woocommerce-Price-amount {
+            font-weight: $var-fw-bold;
+          }
+        }
+
+        .woocommerce-mini-cart__buttons {
+          &:before,
+          &:after {
+            display: none;
+          }
+
+          a {
+            padding: 0 4rem;
+            display: block;
+            text-align: center;
+            margin-bottom: 1rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .widget_shopping_cart {
+        top: 100%;
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 }

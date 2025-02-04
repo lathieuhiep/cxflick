@@ -35,6 +35,20 @@ function cxflick_register_required_plugins(): void {
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
 		array(
+			'name'      =>  'Woocommerce',
+			'slug'      =>  'woocommerce',
+			'required'  =>  true,
+		),
+
+		// This is an example of how to include a plugin from the WordPress Plugin Repository
+		array(
+			'name'      =>  'Breadcrumb Navxt',
+			'slug'      =>  'breadcrumb-navxt',
+			'required'  =>  true,
+		),
+
+		// This is an example of how to include a plugin from the WordPress Plugin Repository
+		array(
 			'name'      =>  'Contact Form 7',
 			'slug'      =>  'contact-form-7',
 			'required'  =>  true,

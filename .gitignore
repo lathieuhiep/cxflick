@@ -8,8 +8,8 @@ package-lock.json
 
 # Loại trừ phần phát triển
 !plugins/
-!plugins/essentials-for-cxflick/
-!plugins/essentials-for-cxflick/**
+!plugins/essential-features-addon/
+!plugins/essential-features-addon/**
 
 !themes/
 !themes/cxflick/

@@ -8,7 +8,7 @@ $enable-rfs: false;
 
 // body
 $body-bg: map-get($mt-colors, "white");
-$body-color: map-get($mt-colors, "primary");
+$body-color: map-get($mt-colors, "black");
 $body-text-align: inherit;
 
 // stylelint-enable value-keyword-case

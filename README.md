@@ -1,7 +1,7 @@
-# WPBuilderCXFlickKit - WordPress Theme & Plugin Development
+# WPBuilderKit - WordPress Theme & Plugin Development
 
 ## Mô tả
-Dự án này bao gồm một theme WordPress cơ bản và một plugin tạo thêm addons cho Elementor. Bạn có thể phát triển song song cả theme và plugin, quản lý SCSS và JS chung thông qua Gulp.
+Dự án này bao gồm một theme WordPress cơ bản và một plugin mở rộng các thành phần cho theme (addons thêm cho elementor,...). Bạn có thể phát triển song song cả theme và plugin, quản lý SCSS và JS chung thông qua Gulp.
 
 ## Cấu trúc thư mục
 - `themes/`: Chứa các theme của WordPress.
@@ -43,4 +43,4 @@ Dự án này bao gồm một theme WordPress cơ bản và một plugin tạo t
 ## Liên Hệ
 
 Nếu bạn gặp vấn đề hoặc có câu hỏi nào liên quan đến dự án, vui lòng mở issue trên GitHub hoặc liên hệ qua
-- email: khacdiepkma90@gmail.com
+- email: [khacdiepkma90@gmail.com](mailto:khacdiepkma90@gmail.com)
