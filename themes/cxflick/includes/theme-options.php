@@ -64,9 +64,6 @@ if ( class_exists( 'CSF' ) ) {
 	// social network options
 	require get_theme_file_path( '/includes/theme-options/social-network-options.php' );
 
-	// shop options
-	require get_theme_file_path( '/includes/theme-options/shop-options.php' );
-
 	// footer options
 	require get_theme_file_path( '/includes/theme-options/footer.php' );
 }

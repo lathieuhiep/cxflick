@@ -10,6 +10,50 @@ form.wpcf7-form p:has(.wpcf7-submit) {
   align-items: center;
 }
 
+@font-face {
+  font-family: "SFProDisplay";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay/SFProDisplay-Thin.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProDisplay";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay/SFProDisplay-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProDisplay";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay/SFProDisplay-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProDisplay";
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay/SFProDisplay-Semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "SFProDisplay";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/SFProDisplay/SFProDisplay-Bold.woff2") format("woff2");
+}
+button, a {
+  outline: none;
+}
+
+form.wpcf7-form p:has(.wpcf7-submit) {
+  display: flex;
+  align-items: center;
+}
+
 :root {
   --theme-primary: #3498db;
   --theme-secondary: #2ecc71;
@@ -20,8 +64,8 @@ form.wpcf7-form p:has(.wpcf7-submit) {
   --theme-info: #17a2b8;
   --theme-black: #000000;
   --theme-white: #ffffff;
-  --theme-ff-base: "Poppins", sans-serif;
-  --theme-ff-heading: "Roboto Slab", sans-serif;
+  --theme-ff-base: "SFProDisplay", sans-serif;
+  --theme-ff-heading: "SFProDisplay", sans-serif;
   --theme-fs-xs: 1.4rem;
   --theme-fs-sm: 1.6rem;
   --theme-fs-md: 1.8rem;

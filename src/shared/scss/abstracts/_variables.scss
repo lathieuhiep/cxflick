@@ -1,4 +1,5 @@
 $prefix-theme: theme-;
+$font-path: '../fonts/SFProDisplay';
 
 // color
 $mt-colors: (
@@ -42,8 +43,8 @@ $var-fs-3xl: var(--#{$prefix-theme}fs-3xl);
 
 // font family
 $mt-fonts: (
-        base: '"Poppins", sans-serif',
-        heading: '"Roboto Slab", sans-serif'
+        base: '"SFProDisplay", sans-serif',
+        heading: '"SFProDisplay", sans-serif'
 );
 $var-ff-base: var(--#{$prefix-theme}ff-base);
 $var-ff-heading: var(--#{$prefix-theme}ff-heading);
