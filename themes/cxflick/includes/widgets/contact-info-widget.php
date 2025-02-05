@@ -28,16 +28,14 @@ class CXFlick_Contact_Info_Widget extends WP_Widget {
 			<?php if ( ! empty( $instance['email'] ) ) : ?>
                 <div class="item">
                     <i class="far fa-paper-plane"></i>
-                    <a class="text"
-                       href="mailto:<?php echo esc_attr( $instance['email'] ); ?>"><?php echo esc_html( $instance['email'] ); ?></a>
+                    <a class="text" href="mailto:<?php echo esc_attr( $instance['email'] ); ?>"><?php echo esc_html( $instance['email'] ); ?></a>
                 </div>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $instance['phone'] ) ) : ?>
                 <div class="item">
                     <i class="fas fa-phone"></i>
-                    <a class="text"
-                       href="tel:<?php echo esc_attr( cxflick_preg_replace_ony_number( $instance['phone'] ) ); ?>"><?php echo esc_html( $instance['phone'] ); ?></a>
+                    <a class="text" href="tel:<?php echo esc_attr( cxflick_preg_replace_ony_number( $instance['phone'] ) ); ?>"><?php echo esc_html( $instance['phone'] ); ?></a>
                 </div>
 			<?php endif; ?>
         </div>
