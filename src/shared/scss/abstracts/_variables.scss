@@ -17,6 +17,7 @@ $mt-colors: (
 );
 $var-primary-color: var(--#{$prefix-theme}primary);
 $var-secondary-color: var(--#{$prefix-theme}secondary);
+$var-tertiary-color: var(--#{$prefix-theme}tertiary);
 $var-accent-color: var(--#{$prefix-theme}accent);
 $var-success-color: var(--#{$prefix-theme}success);
 $var-error-color: var(--#{$prefix-theme}error);
@@ -68,7 +69,7 @@ $line-height-heading: 1.25;
 $spacing-base: 0.4rem;
 $spacers: ();
 
-@for $i from 0 through 8 {
+@for $i from 0 through 12 {
   $spacers: map-merge($spacers, (#{$i}: $spacing-base * $i));
 }
 

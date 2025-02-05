@@ -32,9 +32,11 @@
   }
 
   .widget-title {
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    font-size: $var-fs-sm;
+    --#{$prefix-theme}widget-title-fs: #{$var-fs-sm};
+    --#{$prefix-theme}widget-title-mb: var(--#{$prefix-theme}spacing-5);
+
+    margin-bottom: var(--#{$prefix-theme}widget-title-mb);
+    font-size: var(--#{$prefix-theme}widget-title-fs);
   }
 
   ul {
@@ -218,10 +220,42 @@
         grid-template-columns: 2.4rem 1fr;
         align-items: center;
 
-        i {
-          font-size: $var-fs-md;
-          text-align: center;
+        .icon {
+          @include square(2.4rem);
+          background-color: $var-tertiary-color;
+          mask-size: contain;
+          -webkit-mask-size: contain;
+          mask-repeat: no-repeat;
+          -webkit-mask-repeat: no-repeat;
+          mask-position: center;
+          -webkit-mask-position: center;
         }
+
+        &.address {
+          .icon {
+            mask-image: url("#{$image-path}/icons/ic-location.svg");
+            -webkit-mask-image: url("#{$image-path}/icons/ic-location.svg");
+          }
+        }
+
+        &.email {
+          .icon {
+            mask-image: url("#{$image-path}/icons/ic-paper-plane.svg");
+            -webkit-mask-image: url("#{$image-path}/icons/ic-paper-plane.svg");
+          }
+        }
+
+        &.phone {
+            .icon {
+                mask-image: url("#{$image-path}/icons/ic-phone.svg");
+                -webkit-mask-image: url("#{$image-path}/icons/ic-phone.svg");
+            }
+        }
+
+        //i {
+        //  font-size: $var-fs-md;
+        //  text-align: center;
+        //}
       }
     }
   }

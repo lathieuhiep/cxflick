@@ -1,13 +1,24 @@
 <?php
-// A Custom function for get an option
+// get value from theme options
 if ( ! function_exists( 'cxflick_get_option' ) ) {
-	function cxflick_get_option( $option = '', $default = null ) {
-		$options = get_option( 'options' );
+    function cxflick_get_option( $option = '', $default = null ) {
+        $options = get_option( 'options' );
 
-		return ( isset( $options[ $option ] ) ) ? $options[ $option ] : $default;
-	}
+        // check if option is not empty
+        if ( ! is_array( $options ) ) {
+            $options = [];
+        }
+
+        $value = $options[$option] ?? $default;
+
+        // check if value is not an array
+        if ( ! is_array( $value ) ) {
+            return $default;
+        }
+
+        return $value;
+    }
 }
-
 
 // Control core classes for avoid errors
 if ( class_exists( 'CSF' ) ) {

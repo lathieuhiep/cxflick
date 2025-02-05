@@ -86,6 +86,10 @@ form.wpcf7-form p:has(.wpcf7-submit) {
   --theme-spacing-6: 2.4rem;
   --theme-spacing-7: 2.8rem;
   --theme-spacing-8: 3.2rem;
+  --theme-spacing-9: 3.6rem;
+  --theme-spacing-10: 4rem;
+  --theme-spacing-11: 4.4rem;
+  --theme-spacing-12: 4.8rem;
 }
 
 button, a {
@@ -871,9 +875,10 @@ form.wpcf7-form p:has(.wpcf7-submit) {
   margin-bottom: 0;
 }
 .widget .widget-title {
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-  font-size: var(--theme-fs-sm);
+  --theme-widget-title-fs: var(--theme-fs-sm);
+  --theme-widget-title-mb: var(--theme-spacing-5);
+  margin-bottom: var(--theme-widget-title-mb);
+  font-size: var(--theme-widget-title-fs);
 }
 .widget ul {
   margin: 0;
@@ -998,9 +1003,28 @@ form.wpcf7-form p:has(.wpcf7-submit) {
   grid-template-columns: 2.4rem 1fr;
   align-items: center;
 }
-.widget.contact-info-widget .list .item i {
-  font-size: var(--theme-fs-md);
-  text-align: center;
+.widget.contact-info-widget .list .item .icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--theme-tertiary);
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+}
+.widget.contact-info-widget .list .item.address .icon {
+  mask-image: url("../images/icons/ic-location.svg");
+  -webkit-mask-image: url("../images/icons/ic-location.svg");
+}
+.widget.contact-info-widget .list .item.email .icon {
+  mask-image: url("../images/icons/ic-paper-plane.svg");
+  -webkit-mask-image: url("../images/icons/ic-paper-plane.svg");
+}
+.widget.contact-info-widget .list .item.phone .icon {
+  mask-image: url("../images/icons/ic-phone.svg");
+  -webkit-mask-image: url("../images/icons/ic-phone.svg");
 }
 
 a, button {
@@ -1012,8 +1036,25 @@ form.wpcf7-form p:has(.wpcf7-submit) {
   align-items: center;
 }
 
-.global-footer section.widget {
-  margin-bottom: 0;
+.global-footer {
+  color: var(--theme-white);
+  background-color: var(--theme-black);
+  background-image: url("../images/bg-footer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.global-footer a {
+  color: inherit;
+}
+.global-footer a:hover {
+  color: var(--theme-tertiary);
+}
+.global-footer .widget .widget-title {
+  --theme-widget-title-fs: var(--theme-fs-lg);
+  --theme-widget-title-mb: var(--theme-spacing-12);
+  color: inherit;
+  font-weight: var(--theme-fw-medium);
 }
 .global-footer__column {
   border-top: 0.1rem solid var(--theme-primary);
@@ -1021,8 +1062,6 @@ form.wpcf7-form p:has(.wpcf7-submit) {
 }
 .global-footer__bottom {
   padding: 1rem 0;
-  color: var(--theme-white);
-  background-color: var(--theme-black);
 }
 
 /**

@@ -1,9 +1,28 @@
 @import "../../../shared/scss/abstracts/abstracts";
 
 .global-footer {
-  section {
-    &.widget {
-      margin-bottom: 0;
+  color: $var-white-color;
+  background-color: $body-color;
+  background-image: url("#{$image-path}/bg-footer.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $var-tertiary-color;
+    }
+  }
+
+  .widget {
+    .widget-title {
+      --#{$prefix-theme}widget-title-fs: #{$var-fs-lg};
+      --#{$prefix-theme}widget-title-mb: var(--#{$prefix-theme}spacing-12);
+
+      color: inherit;
+      font-weight: $var-fw-medium;
     }
   }
 
@@ -14,7 +33,5 @@
 
   &__bottom {
     padding: 1rem 0;
-    color: $var-white-color;
-    background-color: $body-color;
   }
 }
