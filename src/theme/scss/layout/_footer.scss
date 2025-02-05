@@ -1,6 +1,7 @@
 @import "../../../shared/scss/abstracts/abstracts";
 
 .global-footer {
+  padding: 12.6rem 0 6rem;
   color: $var-white-color;
   background-color: $body-color;
   background-image: url("#{$image-path}/bg-footer.png");
@@ -27,11 +28,23 @@
   }
 
   &__column {
-    border-top: .1rem solid $var-primary-color;
-    padding: 3rem 0;
+    + .global-footer__bottom {
+      margin-top: 11rem;
+
+      .grid {
+        padding-top: 52px;
+        border-top: 1px solid #2F2F2F;
+      }
+    }
   }
 
   &__bottom {
-    padding: 1rem 0;
+    color: #979797;
+
+    .grid {
+      display: grid;
+      gap: var(--#{$prefix-theme}spacing-3);
+      grid-template-columns: 1fr auto;
+    }
   }
 }

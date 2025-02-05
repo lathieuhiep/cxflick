@@ -21,7 +21,7 @@ if ( !is_404() ) :
         <?php
         get_template_part( 'template-parts/footer/footer','sidebar' );
 
-        get_template_part( 'template-parts/footer/footer','copyright' );
+        get_template_part( 'template-parts/footer/footer','bottom' );
         ?>
     </footer>
 <?php

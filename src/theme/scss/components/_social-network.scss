@@ -1,9 +1,11 @@
 @import "../../../shared/scss/abstracts/abstracts";
 
-.social-network-item {
-  display: inline-block;
+.social-networks {
+  .item {
+    display: inline-block;
 
-  a {
-    display: block;
+    a {
+      display: block;
+    }
   }
 }

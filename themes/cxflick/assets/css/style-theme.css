@@ -1038,6 +1038,7 @@ form.wpcf7-form p:has(.wpcf7-submit) {
 }
 
 .global-footer {
+  padding: 12.6rem 0 6rem;
   color: var(--theme-white);
   background-color: var(--theme-black);
   background-image: url("../images/bg-footer.png");
@@ -1059,12 +1060,20 @@ form.wpcf7-form p:has(.wpcf7-submit) {
   color: inherit;
   font-weight: var(--theme-fw-medium);
 }
-.global-footer__column {
-  border-top: 0.1rem solid var(--theme-primary);
-  padding: 3rem 0;
+.global-footer__column + .global-footer__bottom {
+  margin-top: 11rem;
+}
+.global-footer__column + .global-footer__bottom .grid {
+  padding-top: 52px;
+  border-top: 1px solid #2F2F2F;
 }
 .global-footer__bottom {
-  padding: 1rem 0;
+  color: #979797;
+}
+.global-footer__bottom .grid {
+  display: grid;
+  gap: var(--theme-spacing-3);
+  grid-template-columns: 1fr auto;
 }
 
 /**
@@ -1394,9 +1403,9 @@ form.wpcf7-form p:has(.wpcf7-submit) {
   align-items: center;
 }
 
-.social-network-item {
+.social-networks .item {
   display: inline-block;
 }
-.social-network-item a {
+.social-networks .item a {
   display: block;
 }
