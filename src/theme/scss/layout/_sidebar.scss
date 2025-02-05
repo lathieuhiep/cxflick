@@ -25,6 +25,9 @@
 }
 
 .widget {
+  --#{$prefix-theme}widget-title-fs: #{$var-fs-sm};
+  --#{$prefix-theme}widget-title-mb: var(--#{$prefix-theme}spacing-5);
+
   margin-bottom: 3rem;
 
   &:last-child {
@@ -32,9 +35,6 @@
   }
 
   .widget-title {
-    --#{$prefix-theme}widget-title-fs: #{$var-fs-sm};
-    --#{$prefix-theme}widget-title-mb: var(--#{$prefix-theme}spacing-5);
-
     margin-bottom: var(--#{$prefix-theme}widget-title-mb);
     font-size: var(--#{$prefix-theme}widget-title-fs);
   }
@@ -212,16 +212,18 @@
   &.contact-info-widget {
     .list {
       display: grid;
-      gap: 1.2rem;
+      gap: var(--#{$prefix-theme}spacing-5);
 
       .item {
+        --#{$prefix-theme}icon-width: 3rem;
+
         display: grid;
-        gap: 1.2rem;
-        grid-template-columns: 2.4rem 1fr;
+        gap: var(--#{$prefix-theme}spacing-5);
+        grid-template-columns: var(--#{$prefix-theme}icon-width) 1fr;
         align-items: center;
 
         .icon {
-          @include square(2.4rem);
+          @include square(var(--#{$prefix-theme}icon-width));
           background-color: $var-tertiary-color;
           mask-size: contain;
           -webkit-mask-size: contain;
@@ -251,11 +253,6 @@
                 -webkit-mask-image: url("#{$image-path}/icons/ic-phone.svg");
             }
         }
-
-        //i {
-        //  font-size: $var-fs-md;
-        //  text-align: center;
-        //}
       }
     }
   }

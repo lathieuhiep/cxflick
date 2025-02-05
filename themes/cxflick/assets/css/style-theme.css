@@ -869,14 +869,14 @@ form.wpcf7-form p:has(.wpcf7-submit) {
 }
 
 .widget {
+  --theme-widget-title-fs: var(--theme-fs-sm);
+  --theme-widget-title-mb: var(--theme-spacing-5);
   margin-bottom: 3rem;
 }
 .widget:last-child {
   margin-bottom: 0;
 }
 .widget .widget-title {
-  --theme-widget-title-fs: var(--theme-fs-sm);
-  --theme-widget-title-mb: var(--theme-spacing-5);
   margin-bottom: var(--theme-widget-title-mb);
   font-size: var(--theme-widget-title-fs);
 }
@@ -995,17 +995,18 @@ form.wpcf7-form p:has(.wpcf7-submit) {
 }
 .widget.contact-info-widget .list {
   display: grid;
-  gap: 1.2rem;
+  gap: var(--theme-spacing-5);
 }
 .widget.contact-info-widget .list .item {
+  --theme-icon-width: 3rem;
   display: grid;
-  gap: 1.2rem;
-  grid-template-columns: 2.4rem 1fr;
+  gap: var(--theme-spacing-5);
+  grid-template-columns: var(--theme-icon-width) 1fr;
   align-items: center;
 }
 .widget.contact-info-widget .list .item .icon {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: var(--theme-icon-width);
+  height: var(--theme-icon-width);
   background-color: var(--theme-tertiary);
   mask-size: contain;
   -webkit-mask-size: contain;
@@ -1050,9 +1051,11 @@ form.wpcf7-form p:has(.wpcf7-submit) {
 .global-footer a:hover {
   color: var(--theme-tertiary);
 }
-.global-footer .widget .widget-title {
+.global-footer .widget {
   --theme-widget-title-fs: var(--theme-fs-lg);
   --theme-widget-title-mb: var(--theme-spacing-12);
+}
+.global-footer .widget .widget-title {
   color: inherit;
   font-weight: var(--theme-fw-medium);
 }

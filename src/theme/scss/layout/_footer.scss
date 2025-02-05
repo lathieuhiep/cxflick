@@ -17,10 +17,10 @@
   }
 
   .widget {
-    .widget-title {
-      --#{$prefix-theme}widget-title-fs: #{$var-fs-lg};
-      --#{$prefix-theme}widget-title-mb: var(--#{$prefix-theme}spacing-12);
+    --#{$prefix-theme}widget-title-fs: #{$var-fs-lg};
+    --#{$prefix-theme}widget-title-mb: var(--#{$prefix-theme}spacing-12);
 
+    .widget-title {
       color: inherit;
       font-weight: $var-fw-medium;
     }
