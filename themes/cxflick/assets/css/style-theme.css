@@ -55,10 +55,11 @@ form.wpcf7-form p:has(.wpcf7-submit) {
 }
 
 :root {
-  --theme-primary: #3498db;
-  --theme-secondary: #2ecc71;
-  --theme-accent: #e74c3c;
-  --theme-success: #28a745;
+  --theme-primary: #292929;
+  --theme-secondary: #818181;
+  --theme-tertiary: #FFDF00;
+  --theme-accent: #FF3B30;
+  --theme-success: #3FC700;
   --theme-error: #dc3545;
   --theme-warning: #ffc107;
   --theme-info: #17a2b8;
@@ -354,6 +355,14 @@ form.wpcf7-form p:has(.wpcf7-submit) {
 
 .theme-bg-secondary {
   background-color: var(--theme-secondary);
+}
+
+.theme-text-tertiary {
+  color: var(--theme-tertiary);
+}
+
+.theme-bg-tertiary {
+  background-color: var(--theme-tertiary);
 }
 
 .theme-text-accent {
