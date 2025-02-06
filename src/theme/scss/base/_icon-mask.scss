@@ -1,0 +1,37 @@
+@import "../../../shared/scss/abstracts/abstracts";
+
+.icon-mask {
+  --#{$prefix-theme}icon-mask-color: #{$var-black-color};
+  --#{$prefix-theme}icon-mask-width: 2rem;
+
+  display: inline-block;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  @include square(var(--#{$prefix-theme}icon-mask-width));
+  background-color: var(--#{$prefix-theme}icon-mask-color);
+}
+
+.icon-mask-facebook {
+  mask-image: url("#{$image-path}/icons/ic-facebook.svg");
+}
+
+.icon-mask-instagrams {
+  mask-image: url("#{$image-path}/icons/ic-instagrams.svg");
+}
+
+.icon-mask-youtube {
+  mask-image: url("#{$image-path}/icons/ic-youtube.svg");
+}
+
+.icon-mask-location {
+  mask-image: url("#{$image-path}/icons/ic-location.svg");
+}
+
+.icon-mask-paper-plane {
+  mask-image: url("#{$image-path}/icons/ic-paper-plane.svg");
+}
+
+.icon-mask-phone {
+  mask-image: url("#{$image-path}/icons/ic-phone.svg");
+}

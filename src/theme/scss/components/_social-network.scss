@@ -1,11 +1,25 @@
 @import "../../../shared/scss/abstracts/abstracts";
 
 .social-networks {
-  .item {
-    display: inline-block;
+  --#{$prefix-theme}social-network-spacing: var(--#{$prefix-theme}spacing-6);
 
-    a {
-      display: block;
+  display: flex;
+  gap: var(--#{$prefix-theme}social-network-spacing);
+  align-items: center;
+
+  .item {
+    display: inline-flex;
+    gap: var(--#{$prefix-theme}spacing-3);
+    align-items: center;
+
+    .icon-mask {
+      @include transition();
+    }
+
+    &:hover {
+      .icon-mask {
+        --#{$prefix-theme}icon-mask-color: #{$var-tertiary-color};
+      }
     }
   }
 }

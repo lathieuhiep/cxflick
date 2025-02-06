@@ -8,34 +8,30 @@ CSF::createSection( $prefix_theme_options, array(
 	'fields' => array(
 		array(
 			'id'      => 'opt_social_network',
-			'type'    => 'repeater',
+			'type'    => 'fieldset',
 			'title'   => esc_html__( 'Mạng xã hội', 'cxflick' ),
 			'fields'  => array(
-				array(
-					'id'      => 'icon',
-					'type'    => 'icon',
-					'title'   => esc_html__( 'Icon', 'cxflick' ),
-					'default' => 'fab fa-facebook-f'
-				),
-
-				array(
-					'id'      => 'url',
+                array(
+					'id'      => 'facebook',
 					'type'    => 'text',
-					'title'   => esc_html__( 'URL', 'cxflick' ),
+					'title'   => esc_html__( 'Link Facebook', 'cxflick' ),
 					'default' => '#'
 				),
-			),
-			'default' => array(
-				array(
-					'icon' => 'fab fa-facebook-f',
-					'url'  => '#',
-				),
 
-				array(
-					'icon' => 'fab fa-youtube',
-					'url'  => '#',
-				),
-			)
+                array(
+                    'id'      => 'instagrams',
+                    'type'    => 'text',
+                    'title'   => esc_html__( 'Link Instagrams', 'cxflick' ),
+                    'default' => '#'
+                ),
+
+                array(
+                    'id'      => 'youtube',
+                    'type'    => 'text',
+                    'title'   => esc_html__( 'Link Youtube', 'cxflick' ),
+                    'default' => '#'
+                ),
+			),
 		),
 	)
 ) );

@@ -255,14 +255,14 @@ function cxflick_get_social_url($class = ''): void
     if (empty($opt_social_networks)) {
         return;
     }
+
     ?>
     <div class="social-networks<?php echo esc_attr( $class ? ' ' . $class : '' ); ?>">
-        <?php foreach ($opt_social_networks as $item) : ?>
-            <div class="item">
-                <a href="<?php echo esc_url($item['url']); ?>" target="_blank">
-                    <i class="<?php echo $item['icon']; ?>"></i>
-                </a>
-            </div>
+        <?php foreach ($opt_social_networks as $key => $url) : ?>
+            <a class="item" href="<?php echo esc_url( $url ); ?>" target="_blank">
+                <i class="icon-mask icon-mask-<?php echo esc_attr( $key ); ?>"></i>
+                <span class="d-inline-block text-capitalize"><?php echo esc_html($key); ?></span>
+            </a>
         <?php endforeach; ?>
     </div>
     <?php

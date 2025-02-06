@@ -4,19 +4,7 @@ if ( ! function_exists( 'cxflick_get_option' ) ) {
     function cxflick_get_option( $option = '', $default = null ) {
         $options = get_option( 'options' );
 
-        // check if option is not empty
-        if ( ! is_array( $options ) ) {
-            $options = [];
-        }
-
-        $value = $options[$option] ?? $default;
-
-        // check if value is not an array
-        if ( ! is_array( $value ) ) {
-            return $default;
-        }
-
-        return $value;
+        return ( isset( $options[$option] ) ) ? $options[$option] : $default;
     }
 }
 

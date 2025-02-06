@@ -222,36 +222,9 @@
         grid-template-columns: var(--#{$prefix-theme}icon-width) 1fr;
         align-items: center;
 
-        .icon {
-          @include square(var(--#{$prefix-theme}icon-width));
-          background-color: $var-tertiary-color;
-          mask-size: contain;
-          -webkit-mask-size: contain;
-          mask-repeat: no-repeat;
-          -webkit-mask-repeat: no-repeat;
-          mask-position: center;
-          -webkit-mask-position: center;
-        }
-
-        &.address {
-          .icon {
-            mask-image: url("#{$image-path}/icons/ic-location.svg");
-            -webkit-mask-image: url("#{$image-path}/icons/ic-location.svg");
-          }
-        }
-
-        &.email {
-          .icon {
-            mask-image: url("#{$image-path}/icons/ic-paper-plane.svg");
-            -webkit-mask-image: url("#{$image-path}/icons/ic-paper-plane.svg");
-          }
-        }
-
-        &.phone {
-            .icon {
-                mask-image: url("#{$image-path}/icons/ic-phone.svg");
-                -webkit-mask-image: url("#{$image-path}/icons/ic-phone.svg");
-            }
+        .icon-mask {
+          --#{$prefix-theme}icon-mask-width: var(--#{$prefix-theme}icon-width);
+          --#{$prefix-theme}icon-mask-color: #{$var-tertiary-color};
         }
       }
     }

@@ -1,13 +1,19 @@
 @import "../../../shared/scss/abstracts/abstracts";
 
 .global-footer {
-  padding: 12.6rem 0 6rem;
+  --#{$prefix-theme}-padding: 12.6rem 0 6rem;
+
+  padding: var(--#{$prefix-theme}-padding);
   color: $var-white-color;
   background-color: $body-color;
   background-image: url("#{$image-path}/bg-footer.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (max-width: 1199px) {
+    --#{$prefix-theme}-padding: 6rem 0;
+  }
 
   a {
     color: inherit;
@@ -18,8 +24,15 @@
   }
 
   .widget {
-    --#{$prefix-theme}widget-title-fs: #{$var-fs-lg};
-    --#{$prefix-theme}widget-title-mb: var(--#{$prefix-theme}spacing-12);
+    @media (min-width: 768px) {
+      --#{$prefix-theme}widget-title-mb: var(--#{$prefix-theme}spacing-12);
+      --#{$prefix-theme}widget-title-fs: #{$var-fs-lg};
+    }
+
+    @media (max-width: 767px) {
+      --#{$prefix-theme}widget-title-mb: var(--#{$prefix-theme}spacing-6);
+      --#{$prefix-theme}widget-title-fs: #{$var-fs-md};
+    }
 
     .widget-title {
       color: inherit;
@@ -29,7 +42,14 @@
 
   &__column {
     + .global-footer__bottom {
-      margin-top: 11rem;
+      @media (min-width: 1200px) {
+        margin-top: 11rem;
+      }
+
+      @media (max-width: 1199px) {
+        margin-top: 6rem;
+
+      }
 
       .grid {
         padding-top: 52px;
@@ -43,8 +63,27 @@
 
     .grid {
       display: grid;
-      gap: var(--#{$prefix-theme}spacing-3);
-      grid-template-columns: 1fr auto;
+      gap: var(--#{$prefix-theme}spacing-6);
+
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr auto;
+      }
+
+      .copyright {
+        @media (max-width: 767px) {
+          order: 2;
+        }
+      }
+    }
+  }
+
+  .social-networks {
+    @media (min-width: 1200px) {
+      --#{$prefix-theme}social-network-spacing: 5.6rem;
+    }
+
+    .icon-mask {
+      --#{$prefix-theme}icon-mask-color: #{$var-white-color};
     }
   }
 }
