@@ -2,8 +2,16 @@
 $sticky_menu = cxflick_get_option( 'opt_menu_sticky', '1' );
 $logo = cxflick_get_option( 'opt_general_logo' );
 $cart = cxflick_get_option( 'opt_menu_cart', '1' );
+
+if (is_page_template('templates/fixed-menu.php')) {
+    $position = 'position-fixed';
+} elseif ($sticky_menu == '1') {
+    $position = 'position-sticky';
+} else {
+    $position = 'position-relative';
+}
 ?>
-<header class="main-header <?php echo esc_attr( $sticky_menu == '1' ? 'active-sticky-nav' : '' ); ?>">
+<header class="main-header <?php echo esc_attr( $position ); ?>">
     <nav class="main-header__warp container">
         <div class="logo d-flex align-items-center">
             <a href="<?php echo esc_url( get_home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>">
