@@ -39,7 +39,7 @@ class EFA_Widget_Grid_Linker extends Widget_Base
     // widget keywords
     public function get_keywords(): array
     {
-        return ['image', 'grid', 'gallery', 'linker' ];
+        return ['image', 'grid', 'gallery', 'linker'];
     }
 
     // widget controls
@@ -49,7 +49,7 @@ class EFA_Widget_Grid_Linker extends Widget_Base
         $this->start_controls_section(
             'layout_section',
             [
-                'label' => esc_html__( 'Bố cục', 'clinic' ),
+                'label' => esc_html__('Bố cục', 'clinic'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -57,13 +57,13 @@ class EFA_Widget_Grid_Linker extends Widget_Base
         $this->add_responsive_control(
             'columns',
             [
-                'label' => esc_html__( 'Cột', 'clinic' ),
+                'label' => esc_html__('Cột', 'clinic'),
                 'type' => Controls_Manager::NUMBER,
                 'min' => 1,
                 'step' => 1,
                 'default' => 3,
                 'selectors' => [
-                    '{{WRAPPER}} .element-gallery-grid-box__warp' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
+                    '{{WRAPPER}} .element-grid-linker' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
                 ],
             ]
         );
@@ -71,9 +71,9 @@ class EFA_Widget_Grid_Linker extends Widget_Base
         $this->add_responsive_control(
             'row_gap',
             [
-                'label' => esc_html__( 'Khoảng cách hàng', 'clinic' ),
+                'label' => esc_html__('Khoảng cách hàng', 'clinic'),
                 'type' => Controls_Manager::SLIDER,
-                'size_units' => [ 'px', 'rem', 'custom' ],
+                'size_units' => ['px', 'rem', 'custom'],
                 'range' => [
                     'px' => [
                         'min' => 0,
@@ -86,7 +86,7 @@ class EFA_Widget_Grid_Linker extends Widget_Base
                     'size' => 24,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .element-gallery-grid-box__warp' => 'grid-column-gap: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .element-grid-linker' => 'column-gap: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -94,9 +94,9 @@ class EFA_Widget_Grid_Linker extends Widget_Base
         $this->add_responsive_control(
             'column_gap',
             [
-                'label' => esc_html__( 'Khoảng cách cột', 'clinic' ),
+                'label' => esc_html__('Khoảng cách cột', 'clinic'),
                 'type' => Controls_Manager::SLIDER,
-                'size_units' => [ 'px', 'rem', 'custom' ],
+                'size_units' => ['px', 'rem', 'custom'],
                 'range' => [
                     'px' => [
                         'min' => 0,
@@ -109,7 +109,7 @@ class EFA_Widget_Grid_Linker extends Widget_Base
                     'size' => 24,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .element-gallery-grid-box__warp' => 'grid-row-gap: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .element-grid-linker' => 'row-gap: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -120,7 +120,7 @@ class EFA_Widget_Grid_Linker extends Widget_Base
         $this->start_controls_section(
             'content_section',
             [
-                'label' => esc_html__( 'Nội dung', 'clinic' ),
+                'label' => esc_html__('Nội dung', 'clinic'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -128,8 +128,8 @@ class EFA_Widget_Grid_Linker extends Widget_Base
         $this->add_control(
             'html_tag',
             [
-                'label'   => esc_html__( 'HTML Tag', 'essential-features-addon' ),
-                'type'    => Controls_Manager::SELECT,
+                'label' => esc_html__('HTML Tag', 'essential-features-addon'),
+                'type' => Controls_Manager::SELECT,
                 'default' => 'h3',
                 'options' => [
                     'h1' => 'H1',
@@ -146,16 +146,16 @@ class EFA_Widget_Grid_Linker extends Widget_Base
 
         $repeater->add_control(
             'list_title', [
-                'label' => esc_html__( 'Tiêu đề', 'clinic' ),
+                'label' => esc_html__('Tiêu đề', 'clinic'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__( 'List Title' , 'clinic' ),
+                'default' => esc_html__('List Title', 'clinic'),
                 'label_block' => true,
             ]
         );
 
         $repeater->add_control(
             'list_image', [
-                'label' => esc_html__( 'Ảnh', 'clinic' ),
+                'label' => esc_html__('Ảnh', 'clinic'),
                 'type' => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => Utils::get_placeholder_image_src(),
@@ -165,7 +165,7 @@ class EFA_Widget_Grid_Linker extends Widget_Base
 
         $repeater->add_control(
             'list_url', [
-                'label' => esc_html__( 'Link tùy chỉnh', 'clinic' ),
+                'label' => esc_html__('Link tùy chỉnh', 'clinic'),
                 'type' => Controls_Manager::URL,
                 'placeholder' => 'https://your-link.com',
                 'show_external' => false,
@@ -180,15 +180,18 @@ class EFA_Widget_Grid_Linker extends Widget_Base
         $this->add_control(
             'list',
             [
-                'label' => esc_html__( 'Danh sách', 'clinic' ),
+                'label' => esc_html__('Danh sách', 'clinic'),
                 'type' => Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'list_title' => esc_html__( 'Title #1', 'clinic' ),
+                        'list_title' => esc_html__('Title #1', 'clinic'),
                     ],
                     [
-                        'list_title' => esc_html__( 'Title #2', 'clinic' ),
+                        'list_title' => esc_html__('Title #2', 'clinic'),
+                    ],
+                    [
+                        'list_title' => esc_html__('Title #3', 'clinic'),
                     ],
                 ],
                 'title_field' => '{{{ list_title }}}',
@@ -211,19 +214,33 @@ class EFA_Widget_Grid_Linker extends Widget_Base
         $tag = $settings['html_tag'];
         ?>
         <div class="element-grid-linker">
-            <?php foreach ( $settings['list'] as $item ) : ?>
-                <div class="item elementor-repeater-item-<?php echo esc_attr( $item['_id'] ); ?>">
-                    <?php if ( !empty( $item['list_image']['id'] ) ) : ?>
-                        <div class="item__thumbnail <?php echo esc_attr( $settings['image_align'] ); ?>">
-                            <?php echo wp_get_attachment_image( $item['list_image']['id'], 'large' ); ?>
+            <?php
+            foreach ($settings['list'] as $index => $item) :
+                $url = $item['list_url']['url'];
+            ?>
+                <div class="item elementor-repeater-item-<?php echo esc_attr($item['_id']); ?>">
+                    <?php if (!empty($item['list_image']['id'])) : ?>
+                        <div class="item__thumbnail">
+                            <?php echo wp_get_attachment_image($item['list_image']['id'], 'medium'); ?>
                         </div>
                     <?php endif; ?>
 
                     <div class="item__body">
-                        <?php if ( $item['list_title'] ) : ?>
-                            <<?php echo esc_html( $tag ); ?> class="title <?php echo esc_attr( $settings['title_align'] ); ?>">
-                                <?php echo esc_html( $item['list_title'] ); ?>
-                            </<?php echo esc_html( $tag ); ?>>
+                        <?php if ($item['list_title']) : ?>
+                            <<?php echo esc_html($tag); ?> class="title">
+                                <?php
+                                if ($url) :
+                                    $link_key = 'link_' . $index;
+                                    $this->add_link_attributes( $link_key, $item['list_url'] );
+                                ?>
+                                    <a <?php $this->print_render_attribute_string( $link_key ); ?>>
+                                        <?php echo esc_html($item['list_title']); ?>
+                                    </a>
+                                <?php else : ?>
+                                    <?php echo esc_html($item['list_title']); ?>
+                                <?php endif; ?>
+
+                            </<?php echo esc_html($tag); ?>>
                         <?php endif; ?>
                     </div>
                 </div>

@@ -29,12 +29,12 @@
         }
 
         i.fa {
-          --#{$prefix-plugin-essentials}ic-color-hover: #{map-get($mt-colors, "accent")};
+          --#{$prefix-plugin-efa}ic-color-hover: #{map-get($mt-colors, "accent")};
 
           font-size: 3rem;
 
           &:hover {
-            color: var(--#{$prefix-plugin-essentials}ic-color-hover);
+            color: var(--#{$prefix-plugin-efa}ic-color-hover);
           }
         }
       }
@@ -55,9 +55,9 @@
         &.active,
         &:hover {
           span {
-            --#{$prefix-plugin-essentials}bk-color-hover: #{map-get($mt-colors, "accent")};
+            --#{$prefix-plugin-efa}bk-color-hover: #{map-get($mt-colors, "accent")};
 
-            background-color: var(--#{$prefix-plugin-essentials}bk-color-hover);
+            background-color: var(--#{$prefix-plugin-efa}bk-color-hover);
           }
         }
       }

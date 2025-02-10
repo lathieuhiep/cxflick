@@ -2,8 +2,8 @@
 @import "../abstracts/abstracts";
 
 .element-testimonial-slider {
-  --#{$prefix-plugin-essentials}fs-name: #{map-get($mt-font-sizes, md)};
-  --#{$prefix-plugin-essentials}fw-name: #{map-get($mt-font-weights, bold)};
+  --#{$prefix-plugin-efa}fs-name: #{map-get($mt-font-sizes, md)};
+  --#{$prefix-plugin-efa}fw-name: #{map-get($mt-font-weights, bold)};
 
   .item {
     &__image {
@@ -19,8 +19,8 @@
       }
 
       .name {
-        font-size: var(--#{$prefix-plugin-essentials}fs-name);
-        font-weight: var(--#{$prefix-plugin-essentials}fw-name);
+        font-size: var(--#{$prefix-plugin-efa}fs-name);
+        font-weight: var(--#{$prefix-plugin-efa}fw-name);
       }
     }
   }

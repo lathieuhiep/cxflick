@@ -7,7 +7,7 @@
   }
 
   .item-post {
-    --#{$prefix-plugin-essentials}fs-title: #{map-get($mt-font-sizes, md)};
+    --#{$prefix-plugin-efa}fs-title: #{map-get($mt-font-sizes, md)};
 
     &__thumbnail {
       margin-bottom: 1.5rem;
@@ -18,7 +18,7 @@
     }
 
     &__title {
-      font-size: var(--#{$prefix-plugin-essentials}fs-title);
+      font-size: var(--#{$prefix-plugin-efa}fs-title);
     }
 
     &__content {

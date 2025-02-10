@@ -1,1 +1,35 @@
-.element-grid-linker {}
+@import "../../../../shared/scss/abstracts/abstracts";
+@import "../abstracts/_variables.scss";
+
+.element-grid-linker {
+  display: grid;
+
+  .item {
+    padding: var(--#{$prefix-plugin-efa}padding-item, 3.4rem 2.8rem);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 8rem minmax(0, 1fr);
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0 .3rem 1rem 0 #E1E1E1;
+
+    @media (max-width: 767px) {
+      --#{$prefix-plugin-efa}padding-item: 2.4rem;
+    }
+
+    &__thumbnail {
+      img {
+        @include square(8rem, 2rem);
+        object-position: center;
+        object-fit: cover;
+      }
+    }
+
+    &__body {
+      .title {
+        margin-bottom: 0;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
